@@ -39,7 +39,7 @@ h1 {
 .slider-section {
     height: 40vh;
     bottom: 0;
-    position: fixed; 
+    position: fixed;
     width: 100%;
 }
 
@@ -62,11 +62,17 @@ h1 {
     top: 0;
     left: 0;
     width: 200px;
-    max-width: 200px;
-    height: 250px;
-    min-height: 250px;
+    height: 300px;
     object-fit: cover;
     cursor: pointer;
+    transform: scale(1);
+    box-shadow: 2px 5px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.wheel__card:hover {
+    width: 220px;
+    height: 320px;
 }
 
 img {
@@ -97,24 +103,3 @@ img {
     font-size: 20px;
     overflow: visible;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
