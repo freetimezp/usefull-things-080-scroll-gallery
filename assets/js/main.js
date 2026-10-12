@@ -1,5 +1,4 @@
-
-gsap.registerPlugin("ScrollTrigger");
+gsap.registerPlugin(ScrollTrigger);
 
 let wheel = document.querySelector(".wheel");
 let images = gsap.utils.toArray(".wheel__card");
@@ -21,7 +20,7 @@ function setup() {
             xPercent: -50,
             yPercent: -50,
             x: x,
-            y: y
+            y: y,
         });
     });
 }
@@ -36,27 +35,12 @@ gsap.to(".wheel", {
         end: "max",
         scrub: 1,
         snap: 1 / images.length,
-        invalidateOnRefresh: true
-    }
+        invalidateOnRefresh: true,
+    },
 });
 
 setup();
-window.addEventListener("resize", setup);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener("resize", () => {
+    setup();
+    ScrollTrigger.refresh();
+});
